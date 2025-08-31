@@ -9,7 +9,7 @@ describe("Webextension Content Script", () => {
 
     await browser.url("https://example.com");
 
-    const EXPECTED_LOG_MESSAGE = "[KK] Example content script loaded";
+    const EXPECTED_LOG_MESSAGE = "[KK] Attached mouseup content script loaded";
     await browser.waitUntil(() => logs.includes(EXPECTED_LOG_MESSAGE));
 
     expect(logs).toContain(EXPECTED_LOG_MESSAGE);

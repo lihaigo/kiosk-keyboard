@@ -40,7 +40,7 @@ export const attachKioskKeyboardMouseUpListener = () => {
     { passive: true },
   );
 
-  console.debug("Attached mouse up event listener for kiosk keyboard extension");
+  console.log("[KK] Attached mouseup content script loaded");
 };
 
 export const isChildElement = (child: HTMLElement, target: HTMLElement): boolean => {
