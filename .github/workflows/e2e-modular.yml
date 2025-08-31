@@ -33,6 +33,8 @@ jobs:
 
       - run: pnpm install --frozen-lockfile --prefer-offline
 
+      - run: pnpm --filter @extension/storage ready
+
       - name: Configure modules | scenario "${{ matrix.scenario }}"
         run: |
           echo "Deleting all features except '${{ matrix.scenario }}'"
