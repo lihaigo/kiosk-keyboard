@@ -11,3 +11,4 @@ A professional virtual screen keyboard extension that supports English, numbers,
 - **Context Menu Integration**: Right-click input fields for quick access
 - **Keyboard Shortcuts**: Full support for special keys (Shift, Enter, Backspace, etc.)
 - **Mobile Responsive**: Optimized for both desktop and mobile devices
+
