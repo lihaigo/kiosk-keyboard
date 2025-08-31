@@ -1,5 +1,5 @@
-import { createStorage, StorageEnum } from '../base/index.js';
-import type { BaseStorageType } from '../base/index.js';
+import type { BaseStorageType } from "../base/index.js";
+import { createStorage, StorageEnum } from "../base/index.js";
 
 export interface VirtualKeyboardState {
   activeElementId: string | null;
@@ -13,7 +13,7 @@ export type VirtualKeyboardStorageType = BaseStorageType<VirtualKeyboardState> &
 };
 
 const storage = createStorage<VirtualKeyboardState>(
-  'virtual-keyboard-storage-key',
+  "virtual-keyboard-storage-key",
   {
     activeElementId: null,
     activeElementType: null,
@@ -40,7 +40,7 @@ export const virtualKeyboardStorage: VirtualKeyboardStorageType = {
       isActive: true,
     });
 
-    console.debug('Virtual keyboard focused on element:', elementId);
+    console.debug("Virtual keyboard focused on element:", elementId);
   },
   clearFocus: async () => {
     await storage.set({
@@ -48,6 +48,6 @@ export const virtualKeyboardStorage: VirtualKeyboardStorageType = {
       activeElementType: null,
       isActive: false,
     });
-    console.debug('Virtual keyboard focus cleared');
+    console.debug("Virtual keyboard focus cleared");
   },
 };

@@ -1,4 +1,4 @@
-import { virtualKeyboard } from '@extension/shared';
+import { virtualKeyboard } from "@extension/shared";
 
 // export const handleTouchEndEvent = () => {
 //     document.addEventListener('touchend', (event) => {
@@ -16,14 +16,14 @@ import { virtualKeyboard } from '@extension/shared';
 
 export const attachKioskKeyboardMouseUpListener = () => {
   document.body.addEventListener(
-    'mouseup',
-    event => {
-      const kioskKeyboardRoot = document.getElementById('kiosk-keyboard-root');
-      console.debug('Mouse up event detected:', event);
-      console.debug('Target:', event.target);
-      console.debug('Keyboard Element:', kioskKeyboardRoot);
+    "mouseup",
+    (event) => {
+      const kioskKeyboardRoot = document.getElementById("kiosk-keyboard-root");
+      console.debug("Mouse up event detected:", event);
+      console.debug("Target:", event.target);
+      console.debug("Keyboard Element:", kioskKeyboardRoot);
       console.debug(
-        'Is child element of keyboard root:',
+        "Is child element of keyboard root:",
         kioskKeyboardRoot && event.target instanceof HTMLElement && isChildElement(event.target, kioskKeyboardRoot),
       );
 
@@ -40,7 +40,7 @@ export const attachKioskKeyboardMouseUpListener = () => {
     { passive: true },
   );
 
-  console.debug('Attached mouse up event listener for kiosk keyboard extension');
+  console.debug("Attached mouse up event listener for kiosk keyboard extension");
 };
 
 export const isChildElement = (child: HTMLElement, target: HTMLElement): boolean => {

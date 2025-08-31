@@ -4,7 +4,7 @@
  * @returns path to the Chrome extension
  */
 export const getChromeExtensionPath = async (browser: WebdriverIO.Browser) => {
-  await browser.url('chrome://extensions/');
+  await browser.url("chrome://extensions/");
   /**
    * https://webdriver.io/docs/extension-testing/web-extensions/#test-popup-modal-in-chrome
    * ```ts
@@ -17,15 +17,15 @@ export const getChromeExtensionPath = async (browser: WebdriverIO.Browser) => {
    *  @url https://github.com/yourusername/kiosk-keyboard/issues/786
    */
   const extensionItem = await (async () => {
-    const extensionsManager = await $('extensions-manager').getElement();
-    const itemList = await extensionsManager.shadow$('#container > #viewManager > extensions-item-list');
-    return itemList.shadow$('extensions-item');
+    const extensionsManager = await $("extensions-manager").getElement();
+    const itemList = await extensionsManager.shadow$("#container > #viewManager > extensions-item-list");
+    return itemList.shadow$("extensions-item");
   })();
 
-  const extensionId = await extensionItem.getAttribute('id');
+  const extensionId = await extensionItem.getAttribute("id");
 
   if (!extensionId) {
-    throw new Error('Extension ID not found');
+    throw new Error("Extension ID not found");
   }
 
   return `chrome-extension://${extensionId}`;
@@ -37,12 +37,12 @@ export const getChromeExtensionPath = async (browser: WebdriverIO.Browser) => {
  * @returns path to the Firefox extension
  */
 export const getFirefoxExtensionPath = async (browser: WebdriverIO.Browser) => {
-  await browser.url('about:debugging#/runtime/this-firefox');
+  await browser.url("about:debugging#/runtime/this-firefox");
   const uuidElement = await browser.$('//dt[contains(text(), "Internal UUID")]/following-sibling::dd').getElement();
   const internalUUID = await uuidElement.getText();
 
   if (!internalUUID) {
-    throw new Error('Internal UUID not found');
+    throw new Error("Internal UUID not found");
   }
 
   return `moz-extension://${internalUUID}`;

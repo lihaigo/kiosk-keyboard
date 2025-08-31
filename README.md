@@ -1,10 +1,10 @@
 # Kiosk Keyboard Extension
 
-A professional virtual screen keyboard extension that supports English, numbers, and Traditional Chinese (繁體中文) input methods.
+A professional virtual screen keyboard extension that supports English, numbers, and Traditional Chinese input methods.
 
 ## Features
 
-- **Multi-language Support**: English QWERTY, Numbers, and Traditional Chinese (Bopomofo/注音)
+- **Multi-language Support**: English QWERTY, Numbers, and Traditional Chinese
 - **Smart Input Detection**: Automatically detects input fields and content-editable elements
 - **Customizable Settings**: Toggle auto-show, position, theme, and default language
 - **Professional UI**: Clean, responsive design that works on all websites

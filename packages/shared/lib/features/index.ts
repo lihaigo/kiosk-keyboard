@@ -1,1 +1,1 @@
-export * from './virtual-keyboard.js';
+export * from "./virtual-keyboard.js";

@@ -1,4 +1,4 @@
-import { VirtualKeyboard } from '@extension/ui';
+import { VirtualKeyboard } from "@extension/ui";
 
 export default function App() {
   return (

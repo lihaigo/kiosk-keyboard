@@ -16,9 +16,8 @@
     "clean:turbo": "rimraf .turbo",
     "clean": "pnpm clean:bundle && pnpm clean:node_modules && pnpm clean:turbo",
     "ready": "tsc -b && tsc-alias -p tsconfig.json",
-    "lint": "eslint .",
+    "lint": "biome check --diagnostic-level=error .",
     "lint:fix": "pnpm lint --fix",
-    "format": "prettier . --write --ignore-path ../../.prettierignore",
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
@@ -26,6 +25,7 @@
     "@extension/shared": "workspace:*",
     "@extension/storage": "workspace:*",
     "clsx": "^2.1.1",
+    "lucide-react": "^0.539.0",
     "tailwind-merge": "^3.3.0"
   },
   "devDependencies": {

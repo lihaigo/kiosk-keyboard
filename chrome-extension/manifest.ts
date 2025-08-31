@@ -1,7 +1,7 @@
-import { readFileSync } from 'node:fs';
-import type { ManifestType } from '@extension/shared';
+import { readFileSync } from "node:fs";
+import type { ManifestType } from "@extension/shared";
 
-const packageJson = JSON.parse(readFileSync('./package.json', 'utf8'));
+const packageJson = JSON.parse(readFileSync("./package.json", "utf8"));
 
 /**
  * @prop default_locale
@@ -20,43 +20,43 @@ const packageJson = JSON.parse(readFileSync('./package.json', 'utf8'));
  */
 const manifest = {
   manifest_version: 3,
-  default_locale: 'en',
-  name: '__MSG_extensionName__',
+  default_locale: "en",
+  name: "__MSG_extensionName__",
   browser_specific_settings: {
     gecko: {
-      id: 'example@example.com',
-      strict_min_version: '109.0',
+      id: "example@example.com",
+      strict_min_version: "109.0",
     },
   },
   version: packageJson.version,
-  description: '__MSG_extensionDescription__',
-  host_permissions: ['<all_urls>'],
-  permissions: ['storage', 'scripting', 'tabs', 'notifications'],
+  description: "__MSG_extensionDescription__",
+  host_permissions: ["<all_urls>"],
+  permissions: ["storage", "scripting", "tabs", "notifications"],
   action: {
-    default_popup: 'popup/index.html',
-    default_icon: 'icon-34.png',
+    default_popup: "popup/index.html",
+    default_icon: "logo/favicon-96x96.png",
   },
   icons: {
-    '128': 'icon-128.png',
+    "128": "logo/web-app-manifest-192x192.png",
   },
   content_scripts: [
     {
-      matches: ['http://*/*', 'https://*/*', '<all_urls>'],
-      js: ['content/all.iife.js'],
+      matches: ["http://*/*", "https://*/*", "<all_urls>"],
+      js: ["content/all.iife.js"],
     },
     {
-      matches: ['http://*/*', 'https://*/*', '<all_urls>'],
-      js: ['content-ui/all.iife.js'],
+      matches: ["http://*/*", "https://*/*", "<all_urls>"],
+      js: ["content-ui/all.iife.js"],
     },
     {
-      matches: ['http://*/*', 'https://*/*', '<all_urls>'],
-      css: ['content.css'],
+      matches: ["http://*/*", "https://*/*", "<all_urls>"],
+      css: ["content.css"],
     },
   ],
   web_accessible_resources: [
     {
-      resources: ['*.js', '*.css', '*.svg', 'icon-128.png', 'icon-34.png'],
-      matches: ['*://*/*'],
+      resources: ["*.js", "*.css", "*.svg", "icon-128.png", "icon-34.png"],
+      matches: ["*://*/*"],
     },
   ],
 } satisfies ManifestType;

@@ -3,8 +3,8 @@
  * https://webdriver.io/docs/configurationfile
  */
 export const config: WebdriverIO.Config = {
-  runner: 'local',
-  tsConfigPath: '../tsconfig.json',
+  runner: "local",
+  tsConfigPath: "../tsconfig.json",
 
   //
   // ==================
@@ -20,7 +20,7 @@ export const config: WebdriverIO.Config = {
   //
   // The path of the spec files will be resolved relative from the directory
   // of the config file unless it's absolute.
-  specs: ['../specs/**/*.ts'],
+  specs: ["../specs/**/*.ts"],
   // Patterns to exclude.
   exclude: [],
   //
@@ -54,7 +54,7 @@ export const config: WebdriverIO.Config = {
   // Define all options that are relevant for the WebdriverIO instance here
   //
   // Level of logging verbosity: trace | debug | info | warn | error | silent
-  logLevel: 'info',
+  logLevel: "info",
 
   //
   // If you only want to run your tests until a specific amount of tests have failed use
@@ -80,18 +80,18 @@ export const config: WebdriverIO.Config = {
   //
   // Make sure you have the wdio adapter package for the specific framework installed
   // before running any tests.
-  framework: 'mocha',
+  framework: "mocha",
 
   //
   // Test reporter for stdout.
   // The only one supported by default is 'dot'
   // see also: https://webdriver.io/docs/dot-reporter
-  reporters: ['spec'],
+  reporters: ["spec"],
 
   // Options to be passed to Mocha.
   // See the full list at http://mochajs.org/
   mochaOpts: {
-    ui: 'bdd',
+    ui: "bdd",
     timeout: 60000,
   },
 };

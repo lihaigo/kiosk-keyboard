@@ -1,0 +1,59 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.2.0/schema.json",
+  "vcs": {
+    "enabled": false,
+    "clientKind": "git",
+    "useIgnoreFile": false
+  },
+  "files": {
+    "ignoreUnknown": false,
+    "includes": [
+      "**/pages/**/*",
+      "**/packages/**/*",
+      "**/tests/**/*",
+      "**/chrome-extension/**/*",
+      "**/index.html",
+      "**/vite.config.mjs",
+      "!**/chrome-extension/manifest.js",
+      "!**/dist/**/*"
+    ]
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "lineWidth": 120
+  },
+  "assist": { "actions": { "source": { "organizeImports": "on" } } },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "nursery": {
+        "useSortedClasses": {
+          "options": {
+            "attributes": ["classList"],
+            "functions": ["clsx", "cva", "tw", "tw.*"]
+          },
+          "fix": "safe",
+          "level": "warn"
+        }
+      },
+      "suspicious": {
+        "noUnknownAtRules": "info",
+        "noArrayIndexKey": "info",
+        "noExplicitAny": "info"
+      },
+      "correctness": {
+        "useUniqueElementIds": "off"
+      },
+      "style": {
+        "noNonNullAssertion": "info"
+      }
+    }
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "double"
+    }
+  }
+}

@@ -1,4 +1,4 @@
-import { config } from '@dotenvx/dotenvx';
+import { config } from "@dotenvx/dotenvx";
 
 export const baseEnv =
   config({
@@ -6,5 +6,5 @@ export const baseEnv =
   }).parsed ?? {};
 
 export const dynamicEnvValues = {
-  KK_NODE_ENV: baseEnv.KK_DEV === 'true' ? 'development' : 'production',
+  KK_NODE_ENV: baseEnv.KK_DEV === "true" ? "development" : "production",
 } as const;

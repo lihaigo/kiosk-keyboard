@@ -1,9 +1,20 @@
 {
-    "files.exclude": {
-        "dist": true,
-        ".turbo": true,
-        ".husky": true,
-        ".github": true,
-        "node_modules": true
-    }
+  "files.exclude": {
+    "dist": false,
+    ".turbo": false,
+    ".husky": false,
+    ".github": false,
+    "node_modules": false
+  },
+  "editor.defaultFormatter": "biomejs.biome",
+  "[typescript]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports.biome": "explicit",
+    "source.fixAll.biome": "explicit",
+    "quickfix.biome": "explicit",
+    "source.addMissingImports": "explicit"
+  }
 }

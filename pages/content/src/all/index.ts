@@ -1,5 +1,5 @@
-import { attachKioskKeyboardMouseUpListener } from '@src/all/add-event';
+import { attachKioskKeyboardMouseUpListener } from "@src/all/add-event";
 
 void attachKioskKeyboardMouseUpListener();
 
-console.log('[KK] All content script loaded');
+console.log("[KK] All content script loaded");
