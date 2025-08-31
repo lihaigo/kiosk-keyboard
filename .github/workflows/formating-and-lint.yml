@@ -1,9 +1,9 @@
-name: Lint Check
+name: Fromating and Lint Check
 
 on: [ pull_request_target ]
 
 jobs:
-  eslint:
+  biome:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

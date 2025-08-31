@@ -1,10 +1,10 @@
 {
   "files.exclude": {
-    "dist": true,
-    ".turbo": true,
-    ".husky": true,
-    ".github": true,
-    "node_modules": true
+    "dist": false,
+    ".turbo": false,
+    ".husky": false,
+    ".github": false,
+    "node_modules": false
   },
   "editor.defaultFormatter": "biomejs.biome",
   "[typescript]": {
